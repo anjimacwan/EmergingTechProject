@@ -53,8 +53,11 @@ exports.read = function (req, res) {
 //
 exports.update = function (req, res) {
     const article = req.article;
-    article.title = req.body.title;
-    article.content = req.body.content;
+    article.patientname = req.body.patientname;
+    article.temperature = req.body.temperature;
+    article.heartrate = req.body.heartrate;
+    article.bloodpressurelow = req.body.bloodpressurelow;
+    article.bloodpressurehigh = req.body.bloodpressurehigh;
     article.save((err) => {
         if (err) {
             return res.status(400).send({

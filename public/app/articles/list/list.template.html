@@ -1,16 +1,15 @@
 ﻿<h1>Vital Signs List</h1>
 <ul>
     <li *ngFor="let article of articles">
-        <a [routerLink]="['/articles', article._id]">{{article.temperature}}</a>
+        <a [routerLink]="['/articles', article._id]">{{article.patientname}}</a>
         <br>
         <small>{{article.created}}/{{article.creator.fullName}}</small>
-        <p>{{article.temperature}}</p>
-        <p>{{article.heartrate}}</p>
-        <p>{{article.bloodpressurelow}}</p>
-        <p>{{article.bloodpressurehigh}}</p>
+        <p>Body Temperature    : {{article.temperature}}</p>
+        <p>Heart Rate          : {{article.heartrate}}</p>
+        <p>Blood Pressure Low  : {{article.bloodpressurelow}}</p>
+        <p>Blood Pressure High : {{article.bloodpressurehigh}}</p>
     </li>
 </ul>
 <div *ngIf="articles && articles.length === 0">
-    No Vital Signs Information filled yet, why don't you <a [routerLink]="['/articles/
-create']">create one</a>?
+    No Vital Signs Information filled yet, why don't you <a [routerLink]="['/articles/create']">create one</a>?
 </div>

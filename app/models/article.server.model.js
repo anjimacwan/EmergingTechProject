@@ -5,6 +5,11 @@ const ArticleSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    patientname: {
+        type: String,
+        default: '',
+        trim: true
+    },
     temperature: {
         type: String,
         default: '',

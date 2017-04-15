@@ -1,6 +1,13 @@
 ﻿<h1>Patient's Vital Signs Information</h1>
 <form (ngSubmit)="create()" novalidate>
     <div>
+        <label for="patientname">Patient Name</label>
+        <div>
+            <input type="text" required [(ngModel)]="article.patientname"
+                   name="patientname" placeholder="Patient Name">
+        </div>
+    </div>
+    <div>
         <label for="temperature">Temperature</label>
         <div>
             <input type="text" required [(ngModel)]="article.temperature"

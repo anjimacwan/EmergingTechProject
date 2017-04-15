@@ -1,7 +1,7 @@
 ﻿<section *ngIf="article && article.creator">
-    <h1>{{article.temperature}}</h1>
+    <h1>{{article.patientname}}</h1>
     <div *ngIf="allowEdit">
-        <a [routerLink]="['/articles', article._id, 'edit']">Edit Vital Signs</a>
+        <button [routerLink]="['/articles', article._id, 'edit']">Edit Vital Signs</button>
         <button (click)="delete()">Delete Vital Signs</button>
     </div>
     <small>
@@ -12,8 +12,8 @@ fullName
             }}
         </em>
     </small>
-    <p>{{article.temperature}}</p>
-    <p>{{article.heartrate}}</p>
-    <p>{{article.bloodpressurelow}}</p>
-    <p>{{article.bloodpressurehigh}}</p>
+    <p>Body Temperature        :{{article.temperature}}</p>
+    <p>Heart Rate              :{{article.heartrate}}</p>
+    <p>Blood Pressure Low      :{{article.bloodpressurelow}}</p>
+    <p>Blood Pressure High     :{{article.bloodpressurehigh}}</p>
 </section>
